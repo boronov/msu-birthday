@@ -1,4 +1,33 @@
 <resources>
-    <string name="app_name">[MSU] BirthDay</string>
-    <string name="text">Text</string>
+    <string name="app_name">Birthday</string>
+    <string name="curs_4">4 курс</string>
+    <string name="curs_3">3 курс</string>
+    <string name="curs_2">2 курс</string>
+    <string name="curs_1">1 курс</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="curs_5">Выпускники</string>
+    <string name="pmii">Прикладная математика и информатика</string>
+    <string name="geo">Геология</string>
+    <string name="mo">Международные отношения</string>
+    <string name="gmu">Государственное и муниципальное управление</string>
+    <string name="_6">6</string>
+    <string name="ling">Лингвистика</string>
+    <string name="hfmm">Химия, физика и механика материалов</string>
+    <string name="naprav">Направление</string>
+    <string name="_0">0</string>
+    <string name="all">Любое</string>
+    <string name="curs">Курс</string>
+    <string name="date">Дата</string>
+    <string name="student_list">Список студентов</string>
+    <string name="fio">ФИО студента</string>
+    <string name="all_2">Любой</string>
+    <string name="todo">todo</string>
+    <string name="favorite">Избранные</string>
+    <string name="share">Поделиться</string>
+    <string name="week">Неделя</string>
+    <string name="header_name">MSU Birthday</string>
 </resources>

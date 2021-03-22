@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/back">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark">
+
+    <EditText android:id="@+id/userFilter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
+        android:hint="Начните вводить ФИО"
+        tools:ignore="HardcodedText"
+        android:autofillHints=""
+        android:inputType="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Направление: "
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center"
+                />
+            <Spinner
+                android:id="@+id/naprav"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg"
+                android:popupBackground="@color/colorPrimaryDark">
+            </Spinner>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Курс: "
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center"
+                />
+            <Spinner
+                android:id="@+id/kurs"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg"
+                android:popupBackground="@color/colorPrimaryDark">
+            </Spinner>
+        </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+        <ListView
+        android:id="@+id/userList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+    </ListView>
+    </LinearLayout>
+
+</LinearLayout>

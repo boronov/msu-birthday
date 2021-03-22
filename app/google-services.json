@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "958038680962",
+    "project_id": "msu-birthday-61dc8",
+    "storage_bucket": "msu-birthday-61dc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958038680962:android:8999b7e0c27144aa511b9b",
+        "android_client_info": {
+          "package_name": "tj.msu.birthday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958038680962-eh5khdu1stp4l99ka7b9gmeg3cd46v5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv8YFQgoLReOvuW7CLUZhxKU3KWaVHINM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958038680962-eh5khdu1stp4l99ka7b9gmeg3cd46v5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -19,3 +19,13 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class tj.msu.birthday.data.db.model.Student.*{*;}
+-keep class tj.msu.birthday.data.db.*{*;}
+-keep class tj.msu.birthday.data.db.dao.StudentDAO.*{*;}
+
+#ViewBinding
+-keep class * implements androidx.viewbinding.ViewBinding {
+    public static *** bind(android.view.View);
+    public static *** inflate(android.view.LayoutInflater);
+}
