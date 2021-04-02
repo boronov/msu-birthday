@@ -155,127 +155,127 @@
                         android:textSize="16sp"
                         app:drawableStartCompat="@drawable/ic_naprav" />
                 </LinearLayout>
-                <!--
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
-                                    android:layout_marginBottom="16dp"
-                                    android:gravity="center"
-                                    android:orientation="horizontal">
 
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginEnd="16dp"
-                                        android:gravity="center"
-                                        android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                                        <androidx.cardview.widget.CardView
-                                            android:id="@+id/button_week"
-                                            android:layout_width="50dp"
-                                            android:layout_height="50dp"
-                                            android:clickable="true"
-                                            android:focusable="true"
-                                            android:foreground="?android:selectableItemBackground"
-                                            app:cardBackgroundColor="@color/white"
-                                            app:cardCornerRadius="25dp"
-                                            app:cardElevation="0dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                                            <ImageView
-                                                android:layout_width="25dp"
-                                                android:layout_height="25dp"
-                                                android:layout_gravity="center"
-                                                android:contentDescription="@string/todo"
-                                                android:src="@drawable/ic_today"
-                                                app:tint="@color/gradient_end" />
-                                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button_week"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:selectableItemBackground"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="25dp"
+                            app:cardElevation="0dp">
 
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="8dp"
-                                            android:fontFamily="@font/roboto_medium"
-                                            android:text="@string/week"
-                                            android:textColor="@color/white"
-                                            android:textSize="14sp" />
-                                    </LinearLayout>
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/ic_today"
+                                app:tint="@color/gradient_end" />
+                        </androidx.cardview.widget.CardView>
 
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginEnd="16dp"
-                                        android:gravity="center"
-                                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/week"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
 
-                                        <androidx.cardview.widget.CardView
-                                            android:id="@+id/button_favorite"
-                                            android:layout_width="50dp"
-                                            android:layout_height="50dp"
-                                            android:clickable="true"
-                                            android:focusable="true"
-                                            android:foreground="?android:selectableItemBackground"
-                                            app:cardBackgroundColor="@color/white"
-                                            app:cardCornerRadius="25dp"
-                                            app:cardElevation="0dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                                            <ImageView
-                                                android:layout_width="25dp"
-                                                android:layout_height="25dp"
-                                                android:layout_gravity="center"
-                                                android:contentDescription="@string/todo"
-                                                android:src="@drawable/ic_favorite"
-                                                app:tint="@color/gradient_end" />
-                                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button_favorite"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:selectableItemBackground"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="25dp"
+                            app:cardElevation="0dp">
 
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="8dp"
-                                            android:fontFamily="@font/roboto_medium"
-                                            android:text="@string/favorite"
-                                            android:textColor="@color/white"
-                                            android:textSize="14sp" />
-                                    </LinearLayout>
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/ic_favorite"
+                                app:tint="@color/gradient_end" />
+                        </androidx.cardview.widget.CardView>
 
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="center"
-                                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/favorite"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
 
-                                        <androidx.cardview.widget.CardView
-                                            android:id="@+id/button_share"
-                                            android:layout_width="50dp"
-                                            android:layout_height="50dp"
-                                            android:clickable="true"
-                                            android:focusable="true"
-                                            android:foreground="?android:selectableItemBackground"
-                                            app:cardBackgroundColor="@color/white"
-                                            app:cardCornerRadius="25dp"
-                                            app:cardElevation="0dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                                            <ImageView
-                                                android:layout_width="25dp"
-                                                android:layout_height="25dp"
-                                                android:layout_gravity="center"
-                                                android:contentDescription="@string/todo"
-                                                android:src="@drawable/ic_share"
-                                                app:tint="@color/gradient_end" />
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/button_timetable"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:selectableItemBackground"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="25dp"
+                            app:cardElevation="0dp">
 
-                                        </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/ic_timetable"
+                                app:tint="@color/gradient_end" />
 
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="8dp"
-                                            android:fontFamily="@font/roboto_medium"
-                                            android:text="@string/share"
-                                            android:textColor="@color/white"
-                                            android:textSize="14sp" />
-                                    </LinearLayout>
-                                </LinearLayout>
-                                -->
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/timetable"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
             </LinearLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

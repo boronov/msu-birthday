@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import tj.msu.birthday.R
 import tj.msu.birthday.databinding.ChooseNapravDialogBinding
 import tj.msu.birthday.interfaces.ChooseNapravListener
 
-class ChooseNapravDialog(private val listener: ChooseNapravListener) : BottomSheetDialogFragment() {
+class ChooseNapravDialog(private val listener: ChooseNapravListener, val showAll: Boolean = true) :
+    BottomSheetDialogFragment() {
     private lateinit var binding: ChooseNapravDialogBinding
 
     override fun onCreateView(
@@ -23,6 +25,8 @@ class ChooseNapravDialog(private val listener: ChooseNapravListener) : BottomShe
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.buttonAll.isVisible = showAll
 
         binding.buttonGeo.setOnClickListener {
             listener.callbackNaprav(getString(R.string.geo), "Геология")

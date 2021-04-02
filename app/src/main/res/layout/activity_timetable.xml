@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.timetable.TimetableActivity">
+
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#002147"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/msu_header"
+                android:backgroundTint="@color/white" />
+
+            <TextView
+                android:id="@+id/button_curs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/button_naprav"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/fied_button_selector_timetable"
+                android:clickable="true"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/curs"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_curs" />
+
+            <TextView
+                android:id="@+id/button_send"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/button_curs"
+                android:layout_margin="16dp"
+                android:background="@drawable/fied_button_selector_refresh"
+                android:clickable="true"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/refresg"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_restore" />
+
+            <TextView
+                android:id="@+id/button_naprav"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/fied_button_selector_timetable"
+                android:clickable="true"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/naprav"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_naprav" />
+
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/webview_timetable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/blue"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="visible" />
+
+</RelativeLayout>

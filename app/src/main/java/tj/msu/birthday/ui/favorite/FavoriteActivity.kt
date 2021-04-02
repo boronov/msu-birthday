@@ -22,12 +22,12 @@ class FavoriteActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = getString(R.string.favorite)
-
+/*
         binding.studentList.layoutManager = LinearLayoutManager(this)
 
         studentLiveData.observe(this, Observer {
             binding.studentList.adapter = StudentListAdapter(it)
-        })
+        })*/
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

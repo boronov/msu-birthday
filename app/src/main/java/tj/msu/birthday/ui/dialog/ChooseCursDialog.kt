@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import org.joda.time.LocalDate
 import tj.msu.birthday.R
@@ -12,7 +13,8 @@ import tj.msu.birthday.databinding.ChooseNapravDialogBinding
 import tj.msu.birthday.interfaces.ChooseCursListener
 import tj.msu.birthday.interfaces.ChooseNapravListener
 
-class ChooseCursDialog(private val listener: ChooseCursListener) : BottomSheetDialogFragment() {
+class ChooseCursDialog(private val listener: ChooseCursListener, val showAll: Boolean = true) :
+    BottomSheetDialogFragment() {
     private lateinit var binding: ChooseCursDialogBinding
 
     override fun onCreateView(
@@ -27,6 +29,9 @@ class ChooseCursDialog(private val listener: ChooseCursListener) : BottomSheetDi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val year = LocalDate.now().year - 2000
+
+        binding.buttonCursAll.isVisible = showAll
+        binding.buttonCurs5.isVisible = showAll
 
         binding.buttonCurs1.setOnClickListener {
             listener.callbackCurs(getString(R.string.curs_1), year - 1)

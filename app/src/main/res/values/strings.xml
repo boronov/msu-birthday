@@ -30,4 +30,6 @@
     <string name="share">Поделиться</string>
     <string name="week">Неделя</string>
     <string name="header_name">MSU Birthday</string>
+    <string name="timetable">Расписание</string>
+    <string name="refresg">Обновить</string>
 </resources>

@@ -19,6 +19,7 @@ import kotlinx.coroutines.withContext
 import tj.msu.birthday.App
 import tj.msu.birthday.R
 import tj.msu.birthday.adapter.StudentListAdapter
+import tj.msu.birthday.changeStatusBarColor
 import tj.msu.birthday.data.db.model.Student
 import tj.msu.birthday.databinding.ActivityMainBinding
 import tj.msu.birthday.interfaces.ChooseCursListener
@@ -26,6 +27,7 @@ import tj.msu.birthday.interfaces.ChooseNapravListener
 import tj.msu.birthday.ui.dialog.ChooseCursDialog
 import tj.msu.birthday.ui.dialog.ChooseNapravDialog
 import tj.msu.birthday.ui.favorite.FavoriteActivity
+import tj.msu.birthday.ui.timetable.TimetableActivity
 import tj.msu.birthday.ui.week.WeekActivity
 import java.util.*
 
@@ -49,6 +51,7 @@ class MainActivity : AppCompatActivity(),
         setContentView(binding.root)
 
         supportActionBar?.hide()
+        changeStatusBarColor(binding.root, this, R.color.main)
 
         binding.studentList.layoutManager = LinearLayoutManager(this)
 
@@ -117,19 +120,20 @@ class MainActivity : AppCompatActivity(),
             }
         }
 
-        /*  binding.buttonWeek.setOnClickListener {
-              val intent = Intent(this, WeekActivity::class.java)
-              startActivity(intent)
-          }
+        binding.buttonWeek.setOnClickListener {
+            val intent = Intent(this, WeekActivity::class.java)
+            startActivity(intent)
+        }
 
-          binding.buttonShare.setOnClickListener {
-              Toast.makeText(this, "Clicked", Toast.LENGTH_LONG).show()
-          }
+        binding.buttonTimetable.setOnClickListener {
+            val intent = Intent(this, TimetableActivity::class.java)
+            startActivity(intent)
+        }
 
-          binding.buttonFavorite.setOnClickListener {
-              val intent = Intent(this, FavoriteActivity::class.java)
-              startActivity(intent)
-          }*/
+        binding.buttonFavorite.setOnClickListener {
+            val intent = Intent(this, FavoriteActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun callbackNaprav(naprav: String, napravID: String) {
