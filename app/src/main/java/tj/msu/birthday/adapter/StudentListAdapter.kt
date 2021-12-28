@@ -1,18 +1,26 @@
 package tj.msu.birthday.adapter
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
+import android.os.Build
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import org.joda.time.Days
 import org.joda.time.LocalDate
 import org.joda.time.format.DateTimeFormat
 import org.joda.time.format.DateTimeFormatter
 import tj.msu.birthday.R
+import tj.msu.birthday.STUDENT_COURSE
+import tj.msu.birthday.STUDENT_DIRECTION
+import tj.msu.birthday.STUDENT_FIO
 import tj.msu.birthday.data.db.model.Student
+import tj.msu.birthday.ui.timetable.TimetableActivity
 
 class StudentListAdapter(
     private val student: List<Student>
@@ -35,8 +43,33 @@ class StudentListAdapter(
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
+        val isClickable = student[position].name.last() == '.'
+        viewHolder.itemView.isLongClickable = isClickable
+        if (isClickable) {
+            viewHolder.name.text =
+                student[position].name.substring(0 until student[position].name.lastIndex)
+
+            viewHolder.itemView.setOnLongClickListener {
+                val vibrator =
+                    viewHolder.itemView.context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                if (Build.VERSION.SDK_INT >= 26) {
+                    vibrator.vibrate(
+                        VibrationEffect.createOneShot(
+                            50,
+                            VibrationEffect.DEFAULT_AMPLITUDE
+                        )
+                    )
+                } else {
+                    vibrator.vibrate(50)
+                }
+                return@setOnLongClickListener true
+            }
+        } else {
+            viewHolder.name.text = student[position].name
+            viewHolder.itemView.setOnLongClickListener(null)
+        }
+
         viewHolder.id.text = position.toString()
-        viewHolder.name.text = student[position].name
         viewHolder.birthday.text = student[position].birthday
 
         val formatter: DateTimeFormatter = DateTimeFormat.forPattern("dd.MM.yyyy")
@@ -50,13 +83,28 @@ class StudentListAdapter(
         }
         val p = Days.daysBetween(nowData, nextBDay).days
 
-        viewHolder.dayToBirthday.text = "$p дней до ДР"
-        viewHolder.napravCurs.text =
-            "${student[position].naprav} - ${nowData.year - ((student[position].start) + 2000)}"
+        viewHolder.dayToBirthday.text = "Осталось $p до дня рождения!"
 
-        /*viewHolder.itemView.setOnClickListener {
-            Toast.makeText(it.context, "work", Toast.LENGTH_LONG).show()
-        }*/
+        val course = nowData.year - ((student[position].start) + 2000) + 1
+        if (course < 5) {
+            viewHolder.itemView.isClickable = true
+            viewHolder.itemView.setOnClickListener {
+                val startTimetableActivity =
+                    Intent(it.context, TimetableActivity::class.java).apply {
+                        putExtra(STUDENT_DIRECTION, student[position].naprav)
+                        putExtra(STUDENT_COURSE, course)
+                        putExtra(STUDENT_FIO, viewHolder.name.text.toString())
+                    }
+                it.context.startActivity(startTimetableActivity)
+            }
+            viewHolder.napravCurs.text =
+                "${student[position].naprav} - $course"
+        } else {
+            viewHolder.itemView.isClickable = false
+            viewHolder.itemView.setOnClickListener(null)
+            viewHolder.napravCurs.text =
+                "Выпускник: ${student[position].naprav}-${(student[position].start) + 2000 + 4}"
+        }
 
     }
 

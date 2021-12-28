@@ -3,7 +3,9 @@
     <color name="main">#FF6322</color>
 
     <color name="white">#FFFFFFFF</color>
-    <color name="textPrimary">#111D37</color>
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#999A9E</color>
+
     <color name="gray">#9696B2</color>
     <color name="gradient_end">#FF9C46</color>
     <color name="blue">#002147</color>

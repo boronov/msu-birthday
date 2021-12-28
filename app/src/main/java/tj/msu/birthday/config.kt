@@ -18,6 +18,9 @@ const val STUDENT_COLUMN_START = "start"
 const val STUDENT_COLUMN_NAPRAV = "naprav"
 const val STUDENT_COLUMN_FAVORITE = "isFavorite"
 
+const val STUDENT_COURSE = "course"
+const val STUDENT_DIRECTION = "direction"
+const val STUDENT_FIO = "fio"
 
 
 fun changeStatusBarColor(
